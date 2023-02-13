@@ -33,8 +33,27 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: develop
-      url: 'https://ec2-52-53-210-30.us-west-1.compute.amazonaws.com:3000'
+      url: 'ec2-52-53-210-30.us-west-1.compute.amazonaws.com:3000'
     needs: build
+    steps:     
+      - name: Verificando arquivos
+        uses: actions/checkout@v3
+
+      - name: Copy files with SSH
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
+          SOURCE: "./"
+          REMOTE_HOST: ${{secrets.REMOTE_HOST_DEV}}
+          REMOTE_USER: ${{secrets.REMOTE_USER}}
+          TARGET: ${{secrets.TARGET_DIR}}
+
+  deploy-production:
+    runs-on: ubuntu-latest
+    environment: 
+      name: production
+      url: 'ec2-13-52-79-117.us-west-1.compute.amazonaws.com:3000'
+    needs: deploy-develop
     steps:     
       - name: Verificando arquivos
         uses: actions/checkout@v3
