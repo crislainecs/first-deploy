@@ -11,8 +11,7 @@ on:
       - develop
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
     
     strategy:
@@ -21,29 +20,22 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Build
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
     - run: npm run build --if-present
-    
-  deploy-develop:
-    runs-on: ubuntu-latest
-    environment: 
-      name: develop
-      url: 'ec2-52-53-210-30.us-west-1.compute.amazonaws.com:3000'
-    needs: build
-    steps:     
-      - name: Verificando arquivos
-        uses: actions/checkout@v3
+     
+    - name: Verificando arquivos
+      uses: actions/checkout@v3
 
-      - name: Copy files with SSH
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-          SOURCE: "./"
-          REMOTE_HOST: ${{secrets.REMOTE_HOST}}
-          REMOTE_USER: ${{secrets.REMOTE_USER}}
-          TARGET: ${{secrets.TARGET_DIR}}
+    - name: Copiando arquivos via SSH
+      uses: easingthemes/ssh-deploy@main
+      env:
+        SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
+        SOURCE: "./"
+        REMOTE_HOST: ${{secrets.REMOTE_HOST}}
+        REMOTE_USER: ${{secrets.REMOTE_USER}}
+        TARGET: ${{secrets.TARGET_DIR}}
