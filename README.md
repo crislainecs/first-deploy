@@ -1,6 +1,3 @@
-
-### `First Deploy`
-
 Para fazer o executar esse projeto rode
 
 ```bash
