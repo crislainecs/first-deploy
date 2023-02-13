@@ -1,7 +1,11 @@
 
-### `Instruções`
+### `First Deploy`
 
-em seu terminal execute npm start
+Para fazer o executar esse projeto rode
+
+```bash
+  npm start
+```
 
 Abrir [http://localhost:3000](http://localhost:3000) em seu navegador.
 
