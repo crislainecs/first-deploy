@@ -34,9 +34,11 @@ jobs:
 
     - name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
+    - run: pwd
+    - run: ls -la
       env:
         SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-        SOURCE: "/home/runner/work/first-deploy/first-deploy/build"
+        SOURCE: "build"
         REMOTE_HOST: ${{secrets.REMOTE_HOST}}
         REMOTE_USER: ${{secrets.REMOTE_USER}}
         TARGET: ${{secrets.TARGET_DIR}}
