@@ -12,7 +12,7 @@ function App() {
         <h1>Alunos Grupo 7</h1>
 
 
-        <h5>Allan Sobral</h5>
+        <h5>Allan Sobraal</h5>
 
 
 
