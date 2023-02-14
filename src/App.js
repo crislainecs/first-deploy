@@ -12,7 +12,11 @@ function App() {
         <h1>Alunos Grupo 7</h1>
 
 
+
         <h5>Wilson Araújo</h5>
+
+        <h5>Juliana</h5>
+
 
 
 
