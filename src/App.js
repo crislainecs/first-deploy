@@ -13,10 +13,15 @@ function App() {
 
 
 
+
         <h5>Wilson Araújo</h5>
+
+        <h5>Allan Sobraal</h5>
+
         <h5>Vitor Pandini</h5>
 
         <h5>Juliana</h5>
+
 
 
 
