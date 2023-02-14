@@ -11,6 +11,9 @@ function App() {
 
 
 
+        <h5>Lucas Souza</h5>
+
+
         <h5>Ricardo Fuly</h5>
 
         <h5>Kaio</h5>
@@ -35,7 +38,6 @@ function App() {
         <h5>Allan Sobraal</h5>
         <h5>Vitor Pandini</h5>
         <h5>Juliana</h5>
-
 
 
 
