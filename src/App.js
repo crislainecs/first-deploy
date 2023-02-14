@@ -11,8 +11,9 @@ function App() {
         </p>
         <h1>Alunos Grupo 7</h1>
 
-
         <h5>Roberth Guimaro</h5>
+        <h5>Vitor Pandini</h5>
+        <h5>Juliana</h5>
 
 
       </header>
