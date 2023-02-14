@@ -10,6 +10,9 @@ function App() {
         <h1>Alunos Grupo 7</h1>
 
 
+
+        <h5>Ricardo Fuly</h5>
+
         <h5>Kaio</h5>
 
 
