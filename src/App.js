@@ -11,10 +11,25 @@ function App() {
         </p>
         <h1>Alunos Grupo 7</h1>
 
+
         <h5>Roberth Guimaro</h5>
+
+
+        <h5>Leandro Mayron</h5>
+
+
+
+        <h5>Wilson Araújo</h5>
+
+
         <h5>Allan Sobraal</h5>
         <h5>Vitor Pandini</h5>
         <h5>Juliana</h5>
+
+
+
+
+
 
       </header>
     </div>
