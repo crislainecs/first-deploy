@@ -12,7 +12,18 @@ function App() {
         <h1>Alunos Grupo 7</h1>
 
 
+ leandro
         <h5>Leandro Mayron</h5>
+
+
+        <h5>Allan Sobraal</h5>
+
+        <h5>Vitor Pandini</h5>
+
+        <h5>Juliana</h5>
+
+
+ develop
 
 
 
