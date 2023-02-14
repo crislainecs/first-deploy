@@ -12,6 +12,9 @@ function App() {
         <h1>Alunos Grupo 7</h1>
 
 
+ leandro
+        <h5>Leandro Mayron</h5>
+
 
 
         <h5>Wilson Araújo</h5>
@@ -23,6 +26,7 @@ function App() {
         <h5>Juliana</h5>
 
 
+ develop
 
 
 
